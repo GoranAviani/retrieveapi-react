@@ -10,8 +10,8 @@ state = {
 };
 
 componentDidMount() {
- fetch(`http://localhost:8000/api/v1/list/users/`)
-  //fetch(`https://www.amibit.org/api/v1/list/users/`)
+ //fetch(`http://localhost:8000/api/v1/list/users/`)
+   fetch(`https://www.amibit.org/api/v1/list/users/`)
 
     .then(result => result.json()) // It resolves the promise with a JSON object
     .then(res1 => {
@@ -29,12 +29,10 @@ componentDidMount() {
        {this.state.users.map((x,indeks) =>
             <div key={x.id} className="todo-item">
                 <div className="todo-item-left">
-                    {/*console.log(x.id)*/}
-                    <input type="checkbox"/>
-                    <div className="todo-item-label">{x.username}</div>
+                    <div className="todo-item-label"><p>Id: {x.id} Username: {x.username}</p></div>
                 </div>
                 <div className="remove-item">
-                    &times;
+
                 </div>
             </div>
         )}

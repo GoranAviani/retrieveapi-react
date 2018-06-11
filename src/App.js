@@ -13,11 +13,10 @@ class App extends Component {
         <Titles/>
         <UsersList/>
 
-
-
-
-
       </div>
+
+
+
     );
   }
 
