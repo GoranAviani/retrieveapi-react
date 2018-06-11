@@ -27,13 +27,11 @@ componentDidMount() {
     return (
       <div className="App">
        {this.state.users.map((x,indeks) =>
-            <div key={x.id} className="todo-item">
-                <div className="todo-item-left">
-                    <div className="todo-item-label"><p>Id: {x.id} Username: {x.username}</p></div>
+            <div key={x.id} >
+                <div>
+                    <div><p>Id: {x.id} Username: {x.username}</p></div>
                 </div>
-                <div className="remove-item">
 
-                </div>
             </div>
         )}
 
